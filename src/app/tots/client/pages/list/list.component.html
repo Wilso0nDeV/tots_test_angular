@@ -1,0 +1,28 @@
+<h1>Listado de Cliente</h1>
+<mat-divider></mat-divider>
+<div class="grid bm-12">
+ 
+    <div class="col-12 p-3">
+      <div class="example-button-container">
+        <button 
+        mat-fab color="primary" 
+        matTooltip="Registrar"
+        (click)="onClickOpenModal()"
+        >
+          <mat-icon> person_add_alt </mat-icon>
+        </button>
+      </div>
+    
+    </div>
+  <div class="col-12 p-3">
+    <div class="mat-elevation-z8">
+      <tots-table
+        #tableComp
+        [config]="config"
+        (onAction)="onTableAction($event)"
+        [pageIndex]="1"
+        [pageSize]="5"
+      ></tots-table>
+    </div>
+  </div>
+</div>
